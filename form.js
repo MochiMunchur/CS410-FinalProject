@@ -131,14 +131,15 @@ submitInput.onmouseout = function(){
 }
 
 // gathering form information and output to console on submit click
-submitInput.onsubmit = function (){
+// submitInput.onclick = function (){
+let formCheck = document.getElementById("flexForm").onsubmit = function(){
     // var creation for use        
     let usernameInputValue = document.getElementById("username").value;
     let emailInputValue = document.getElementById("email").value;
+    let commentInputValue = document.getElementById("comment-area").value;
     
     let answers = document.getElementsByName("answer");
     let selectedAnswer;
-    let dateSelection = document.getElementById("date").value;
 
     // check if any necessary details were provided in the form at time of "Submit" click
     // if "username" and "email" has not been provided, console outputs error message
@@ -150,6 +151,7 @@ submitInput.onsubmit = function (){
         console.log(String("========= Form Submission ========="));
         console.log(String("Username: " + usernameInputValue));
         console.log(String("Email: " + emailInputValue));
+        console.log(String("Comments: " + commentInputValue));
     
         // loop through each radio option to determine which value was selected (or if there was a selection)
         for (var i = 0; i < answers.length; i++){
@@ -157,24 +159,11 @@ submitInput.onsubmit = function (){
                 selectedAnswer = answers[i].value;
             }
         }
-        // check if either valid radio was selected
-        if(selectedAnswer !== "yes" && selectedAnswer !== "no"){
-            console.log(String("Newsletter: no submission"));
-        }
-        else{
-            console.log(String("Newsletter: " + selectedAnswer));
-        }
-
-        // check for valid date selection
-        if(dateSelection === ""){
-            console.log(String("Date: no submission"));
-        }
-        else{
-            console.log(String("Date: " + dateSelection)); 
-        }
+        alert("Your comments have been submitted");
     }
     // returning false here prevents the page from refreshing and allows 
     // the console to be viewed with provided information
+
     return false;
 }
 

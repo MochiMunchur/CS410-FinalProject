@@ -1,0 +1,119 @@
+@import url("form-button-styles.css");
+
+/* Header --- filler separator */
+.item1{
+    grid-area: Header;
+}
+
+/* AboutMe */
+.item2{
+    grid-area: AboutMe;
+}
+
+/* Card 1 --- experience */
+.item3{
+    grid-area: Card1;
+}
+
+/* Card 2 --- Projects*/
+.item4{
+    grid-area: Card2;
+}
+
+/* Card 3 --- (undecided)*/
+.item5{
+    grid-area: Card3;
+}
+
+/* Section --- filler separator */
+.item6{
+    grid-area: Section;
+}
+
+/* Footer --- Contact Form*/
+.item7{
+    grid-area: Footer;
+}
+
+/* MyImage */
+.item8{
+    grid-area: MyImage;
+
+/* fillerImage for use of tablet size filler above aboutme */
+}
+.item9{
+    grid-area: fillerImage;
+}
+
+/* grid-container, section class, default for mobile view */
+.grid-container{
+    display: grid;
+    height: 97 vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px; 
+    grid-template-areas:
+        'MyImage'
+        'AboutMe'
+        'Card1'
+        'Card2'
+        'Footer'
+        'Section'
+}
+
+
+/* media query, disable display of Card3 until a screen size greater than 992px */
+@media(max-width: 575px){
+    .item9{
+        display: none;
+    }
+}
+
+
+
+/* media query, disable display of Card3 until a screen size greater than 992px */
+@media(max-width: 992px){
+    .item5{
+        display: none;
+    }   
+    .item1{
+        display: none;
+    }
+}
+
+/* media query for tablet size */
+@media (min-width: 576px) and (max-width: 992px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 10px; 
+        grid-template-areas:
+            'fillerImage     fillerImage'
+            'AboutMe    MyImage'          
+            'Card1      Card2'
+            'Footer     Footer'
+            'Section    Section';
+           
+    }
+}
+
+/* media query for PC size */
+@media (min-width: 993px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 10px; 
+        grid-template-areas:
+            'Header     Header      Header'
+            'AboutMe    AboutMe     MyImage'
+            'Card1      Card3       Card2'
+            'Footer     Footer      Footer'
+            'Section    Section     Section';
+           
+    }
+    .item9{
+        display: none;
+    }
+}

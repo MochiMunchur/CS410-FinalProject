@@ -1,16 +1,15 @@
+@import url("grid-styles.css");
+
 body {
     background: rgb(246,219,231);
     background: radial-gradient(circle, rgba(246,219,231,1) 0%, rgba(194,214,238,1) 100%);
 }
 
-h1 {
-    text-align: center;
-}  
-
 .gradient-color{
     background: linear-gradient(90deg, rgba(156,239,242,1) 0%, rgba(235,224,236,1) 50%, rgba(156,239,242,1) 100%);
 }
 
+/* nav bar adjustments */ 
 .nav-adjust{
     position: static;
     top: 0px;
@@ -18,6 +17,7 @@ h1 {
     width: 100%;
 }
 
+/* details of the title container */ 
 .title-container{
     display: flex;
     flex-direction: row;
@@ -29,6 +29,7 @@ h1 {
     margin: 0;
 }
 
+/* details of the title item when expanded */
 .exp-title-item{
     width: 100%;
     height: 100px;
@@ -38,6 +39,7 @@ h1 {
     margin: 1px;
 }
 
+/* details for the title when not expanded */
 .title-item{
     width: 50%;
     height: 100px;
@@ -47,39 +49,7 @@ h1 {
     margin: 1px;
 }
 
-/* media query, disable display of Card3 until a screen size greater than 992px */
-@media(max-width: 992px){
-    .title-item{
-        display: none;
-    }    
-    .item1{
-        display: none;
-    }
-}
-
-@media(min-width: 993px){
-    .title-container{
-        display: none;
-    }
-    .item9{
-        display: none;
-    }
-}
-
-/* media query, disable display of Card3 until a screen size greater than 992px */
-@media(max-width: 575px){
-    .flex-container{
-        justify-content: flex-start;
-    }
-    .flex-item{
-        width: 5%;
-        height: 100px;
-    }
-    .item9{
-        display: none;
-    }
-}
-
+/* details for title's text */
 .title-text{
     text-decoration: none;
     color: var(--white);
@@ -91,6 +61,7 @@ h1 {
     font-size: x-large;
 }
 
+/* flex container */
 .flex-container{
     display: flex;
     flex-direction: row;
@@ -102,15 +73,17 @@ h1 {
     margin: 0;
 }
 
+/* flex container's item */
 .flex-item{
     width: 30%;
     height: 100px;
     display: inline-block;
     background-color: var(--purple);
     padding: auto;
-    margin: 1px;
+    margin: 2px;
 }
 
+/* details for an item's text */
 .item-text{
     text-decoration: none;
     color: var(--white);
@@ -121,125 +94,21 @@ h1 {
 
 }
 
+/* hover */
 .item-text:hover{
     background-color: var(--green);
     box-shadow: 0 0 0 2px var(--green);
 }
 
+/* focus */
 .item-text:focus{
     outline: none;
     box-shadow: 0 0 0 2px var(--orange);
 }
 
+/* active */
 .item-text:active{
     background-color: var(--orange);
-}
-
-
-
-/* Code for exercise 02-grid */
-
-/* Header --- filler separator */
-.item1{
-    grid-area: Header;
-}
-
-/* AboutMe */
-.item2{
-    grid-area: AboutMe;
-}
-
-/* Card 1 --- experience */
-.item3{
-    grid-area: Card1;
-}
-
-/* Card 2 --- Projects*/
-.item4{
-    grid-area: Card2;
-}
-
-/* Card 3 --- (undecided)*/
-.item5{
-    grid-area: Card3;
-}
-
-/* Section --- filler separator */
-.item6{
-    grid-area: Section;
-}
-
-/* Footer --- Contact Form*/
-.item7{
-    grid-area: Footer;
-}
-
-/* MyImage */
-.item8{
-    grid-area: MyImage;
-
-/* fillerImage for use of tablet size filler above aboutme */
-}
-.item9{
-    grid-area: fillerImage;
-}
-
-/* grid-container, section class, default for mobile view */
-.grid-container{
-    display: grid;
-    height: 97 vh;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 10px; 
-    grid-template-areas:
-        'MyImage'
-        'AboutMe'
-        'Section'
-        'Section'
-        'Card1'
-        'Card2'
-        'Footer'
-}
-
-/* media query, disable display of Card3 until a screen size greater than 992px */
-@media(max-width: 992px){
-    .item5{
-        display: none;
-    }
-}
-
-/* media query for tablet size */
-@media (min-width: 576px) and (max-width: 992px){
-    .grid-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        gap: 10px; 
-        grid-template-areas:
-            'fillerImage     fillerImage'
-            'AboutMe    MyImage'
-            'Section    Section'           
-            'Card1      Card2'
-            'Footer     Footer';
-           
-    }
-}
-
-/* media query for PC size */
-@media (min-width: 993px){
-    .grid-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        gap: 10px; 
-        grid-template-areas:
-            'Header     Header      Header'
-            'AboutMe    AboutMe     MyImage'
-            'Card1      Card2       Card3'
-            'Section    Section     Section'           
-            'Footer     Footer      Footer';
-           
-    }
 }
 
 /* this class is used to adjust rectangular images to become square images and place a circular frame around the image */
@@ -253,13 +122,11 @@ h1 {
   }
   
   /* this class is used to adjust images that used the above 'square-image' class and align the border around the focus of the image */
-  img.square-adjust{
+img.square-adjust{
     width: auto;
     height: 100%;
     margin-left: -100px;
   }
-
-
 
   /* created for dropdown accordion buttons */
 .accordion{
@@ -294,4 +161,27 @@ h1 {
   
 .active:after {
    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/* changes to the media display */
+@media(min-width: 993px){
+    .title-container{
+        display: none;
+    }
+}
+
+@media(max-width: 992px){
+    .title-item{
+        display: none;
+    }    
+}
+
+@media(max-width: 575px){
+    .flex-container{
+        justify-content: flex-start;
+    }
+    .flex-item{
+        width: 30%;
+        height: 100px;
+    }
 }

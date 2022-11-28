@@ -12,11 +12,14 @@ This project contains snippets of code from various projects I have completed ov
 
 How to Run
 ----------------------------------------------------------------------------------------------
+To run locally:
 - Download all files and folders in the repo
 - Open the mainPage.html in a browser window
 - Website should open to your default browser size
 - Adjust browser window to see how the website would work in different media windows
-- Done
+
+Alternatively, visit:
+    https://mochimunchur.github.io/CS410-FinalProject/index.html
 
 Additional Information
 ----------------------------------------------------------------------------------------------
@@ -33,3 +36,6 @@ Additional Information
     https://eloquentjavascript.net/
 
 - Minor adjustments that required assistance was obtained from in-class videos and ppt slides
+
+- Website can be found at:
+    https://mochimunchur.github.io/CS410-FinalProject/index.html

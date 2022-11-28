@@ -163,7 +163,6 @@ let formCheck = document.getElementById("flexForm").onsubmit = function(){
     }
     // returning false here prevents the page from refreshing and allows 
     // the console to be viewed with provided information
-
     return false;
 }
 

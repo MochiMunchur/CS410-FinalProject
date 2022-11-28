@@ -20,12 +20,12 @@
     grid-area: Card2;
 }
 
-/* Card 3 --- (undecided)*/
+/* Card 3 --- filler separator */
 .item5{
     grid-area: Card3;
 }
 
-/* Section --- filler separator */
+/* Section --- logo links to alt pages (github, youtube, etc.) */
 .item6{
     grid-area: Section;
 }
@@ -39,10 +39,6 @@
 .item8{
     grid-area: MyImage;
 
-/* fillerImage for use of tablet size filler above aboutme */
-}
-.item9{
-    grid-area: fillerImage;
 }
 
 /* grid-container, section class, default for mobile view */
@@ -61,15 +57,12 @@
         'Section'
 }
 
-
 /* media query, disable display of Card3 until a screen size greater than 992px */
 @media(max-width: 575px){
     .item9{
         display: none;
     }
 }
-
-
 
 /* media query, disable display of Card3 until a screen size greater than 992px */
 @media(max-width: 992px){
@@ -93,8 +86,7 @@
             'AboutMe    MyImage'          
             'Card1      Card2'
             'Footer     Footer'
-            'Section    Section';
-           
+            'Section    Section';          
     }
 }
 
@@ -108,10 +100,10 @@
         grid-template-areas:
             'Header     Header      Header'
             'AboutMe    AboutMe     MyImage'
-            'Card1      Card3       Card2'
+            'Card1      Card1       Card1'
+            'Card2      Card2       Card2'
             'Footer     Footer      Footer'
             'Section    Section     Section';
-           
     }
     .item9{
         display: none;

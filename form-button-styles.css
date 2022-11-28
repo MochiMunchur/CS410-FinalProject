@@ -6,7 +6,7 @@ body {
 }
 
 .gradient-color{
-    background: linear-gradient(90deg, rgba(156,239,242,1) 0%, rgba(235,224,236,1) 50%, rgba(156,239,242,1) 100%);
+    background: linear-gradient(90deg, rgb(235, 241, 199) 0%, rgba(235,224,236,1) 50%, rgba(235, 241, 199) 100%);
 }
 
 /* nav bar adjustments */ 
@@ -25,7 +25,7 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
-    background-color: var(--purple);
+    background-color: #16123f;
     margin: 0;
 }
 
@@ -34,7 +34,7 @@ body {
     width: 100%;
     height: 100px;
     display: inline-block;
-    background-color: var(--purple);
+    background-color: #16123f;
     padding: auto;
     margin: 1px;
 }
@@ -44,7 +44,7 @@ body {
     width: 50%;
     height: 100px;
     display: inline-block;
-    background-color: var(--purple);
+    background-color: #16123f;
     padding: auto;
     margin: 1px;
 }
@@ -52,7 +52,7 @@ body {
 /* details for title's text */
 .title-text{
     text-decoration: none;
-    color: var(--white);
+    color: white;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -69,7 +69,7 @@ body {
     justify-content: flex-end;
     align-items: flex-start;
     text-align: left;
-    background-color: var(--purple);
+    background-color: #16123f;
     margin: 0;
 }
 
@@ -78,37 +78,47 @@ body {
     width: 30%;
     height: 100px;
     display: inline-block;
-    background-color: var(--purple);
     padding: auto;
     margin: 2px;
+}
+
+/* grid item defaults */
+.grid-item {
+    padding: 10px;
+    font-size: 2.4em;
+    text-align: center;
+  }
+
+/* solely for the bottom of the page bar */
+.bottom-bar{
+    background-color: #16123f;
 }
 
 /* details for an item's text */
 .item-text{
     text-decoration: none;
-    color: var(--white);
+    color: white;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     padding: 2em 1em;
-
 }
 
 /* hover */
 .item-text:hover{
-    background-color: var(--green);
-    box-shadow: 0 0 0 2px var(--green);
+    background-color: #75c9b7;
+    box-shadow: 0 0 0 2px #75c9b7;
 }
 
 /* focus */
 .item-text:focus{
     outline: none;
-    box-shadow: 0 0 0 2px var(--orange);
+    box-shadow: 0 0 0 2px orange;
 }
 
 /* active */
 .item-text:active{
-    background-color: var(--orange);
+    background-color: orange;
 }
 
 /* this class is used to adjust rectangular images to become square images and place a circular frame around the image */
@@ -147,11 +157,12 @@ img.square-adjust{
   
 /* Style the accordion panel. Note: hidden by default */
 .panel {
-   background-color: green;
+   background-color: #75c9b7;
    display: none;
    overflow: hidden;
 }
 
+/* style for accordion button to show area is 'openable'*/
 .accordion:after {
    content: '\02795'; /* Unicode character for "plus" sign (+) */
    font-size: 12px;
@@ -159,6 +170,7 @@ img.square-adjust{
    margin-left: 5px;
 }
   
+/* style for accordion button to show area is 'closable' */
 .active:after {
    content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
